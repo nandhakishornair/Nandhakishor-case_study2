@@ -1,4 +1,4 @@
-//                                              part 2 Q-10  mongodb used!!!
+//                                              part#2 point 10  mongodb used!!!
 const express = require('express'); 
 const loginRouter = express.Router();
 const userdata = require('../model/signinmodel');
@@ -32,7 +32,7 @@ loginRouter.post("/check",function(req,res){
 
 module.exports = loginRouter;
 
-// changed parm=>parms
+// 
 // changed function bracket and double quotes
 // loginRouter.get("/check",function(req,res){
 //     var checkuser = {

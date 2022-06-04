@@ -1,9 +1,10 @@
 const express = require('express'); 
 const path = require ('path'); 
 const cors = require('cors');
- const bodyParser=require('body-parser') //body parser required 
+ const bodyParser=require('body-parser') //body parser required part#! point1,2(also chsnging main in json file)
 // links to addbook and addauthor changed
-// the nav bar is moved to /users folder so that modularization can be achieved  @@ (Q-6)
+// the nav bar is moved to /users folder so that modularization can be achieved 
+// part#2 point 6)
 // nav is used in ejs file books and book only!!! 
 // const nav= [
 //     {
@@ -24,7 +25,7 @@ const cors = require('cors');
 //     }
 // ]
 // user defined local modules
-// error rectified in home router @@@ Q.3 part3
+// error rectified in home router @@@ part#1 point 3
 const loginRouter = require('./src/routes/loginroute');
 const signupRouter = require('./src/routes/signuproute');
 const homeRouter = require('./src/routes/homerouter');
@@ -32,7 +33,7 @@ const booksRouter = require('./src/routes/booksroute');
 const authorsRouter = require('./src/routes/authorsroute');
 
 const app = new express; 
-//the cors is being used to  relax the security applied to an API @@@ Q(7)
+//the cors is being used to  relax the security applied to an API @@@ part#2 point(7)
 app.use(cors({
     origin: '*'
 }));
@@ -46,7 +47,7 @@ app.set('view engine','ejs');
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.json());
 app.use(express.static(path.join(__dirname , '/public'))); 
-
+// part#1 point3 spelling mistake
 app.use('/login',loginRouter); 
 app.use('/signup',signupRouter); 
 app.use('/home',homeRouter); 
@@ -66,5 +67,5 @@ app.get('/',function(req,res){
 const port = process.env.PORT || 5000;
 // @@@   changed 3000=>5000 in console
 app.listen(port,()=>{
-    console.log("Server Ready on 5000");
+    console.log(`Server Ready on ${port}`);
 });

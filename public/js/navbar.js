@@ -18,5 +18,5 @@ const nav= [
     }
 ]
 module.exports = nav;    
-//@@ Q-6 the nav  is used in ejs as navbar ,,,
+//@@ part#@ point 6 the nav  is used in ejs as navbar ,,,
 // the order in nav was changed...
